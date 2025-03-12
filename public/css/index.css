@@ -1,0 +1,296 @@
+/**
+ * @Name: index.css
+ * @Description: 博客首页样式
+ * @Author: 李瑞豪
+ * @Update: 2020-4-30 14:39
+ */
+
+/* public */
+* {
+    outline:  none;
+    cursor: url('/images/icons/default.cur'), auto;
+}
+:active {
+    cursor: url('/images/icons/pointer.cur'), auto;
+}
+:link {
+    cursor: url('/images/icons/pointer.cur'), auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    font-family: "Comic Sans MS", Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+body {
+    background-image: url('/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+    font-family: Monda,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+a {
+    color: #555;
+    outline: 0;
+    word-wrap: break-word;
+}
+a:hover {
+    color: #222;
+    border-bottom-color: #222;
+}
+/* 选中文字的颜色 */
+::selection {
+    background: #00CED1;
+    color: #fff;
+}
+/* CHROME浏览器中自定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: #555;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #1b1b1b;
+    -webkit-border-radius: 5px;
+}
+
+/* jumbotron及文章列表 */
+.main {
+    background: rgba(255,255,255,0.5);
+}
+.jumbotron {
+    background: rgba(255,255,255,0.6);
+}
+.page-description {
+    font-style: oblique;
+    font-size: 1rem;
+}
+.content, .sidebar,
+.article-list li, .card{
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 0 14px #cacbcb;
+}
+.welcome {
+    font-family: MMT;
+    font-size: 2rem;
+}
+.article-list .title {
+    font-size: 22px;
+    border-left: #649ab6 2px solid;
+    padding-left: 10px;
+    word-break: break-word;
+}
+.article-list .title-link {
+    display: inline-block;
+    position: relative;
+    color: #555;
+    border-bottom: none;
+    line-height: 1.5;
+    vertical-align: top;
+    text-decoration: none;
+}
+.article-list .title-link:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+}
+.article-list .title-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+.article-list .description {
+    word-break:break-all;
+    color:#616161;
+    font-size: 0.9rem;
+}
+.article-list .info {
+    margin: 3px 0 10px;
+    color: #999;
+    font-size: 0.75rem;
+}
+.article-list .sticky-flag {
+    display: inline-block;
+    font-size: 1rem;
+    transform: rotate(30deg);
+}
+.article-btn .btn {
+    border-radius: 1rem;
+    font-size: 0.9rem;
+}
+.article-btn .btn:hover {
+    color: #fff;
+    background: #34495e;
+}
+.article-btn .btn:active {
+    transform: scale(0.97);
+}
+
+/* 分页导航 */
+.pagination {
+    margin: 0;
+    justify-content: center;
+}
+.page-link{
+    color: #3f6fa0;
+}
+.page-item.active .page-link{
+    background: #3f6fa0;
+}
+
+/* 侧栏 */
+.sidebar {
+    position: sticky;
+    top: 70px;
+    font-family: "Comic Sans MS", Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.card {
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+.card-header {
+    background: rgba(255, 255, 255, 0.5);
+}
+.card-title {
+    font-size: 1rem;
+    margin: 0;
+}
+.author-avatar {
+    max-width: 100px;
+    transition: all 1s;
+}
+.author-avatar:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+.motto {
+    margin: 0.5rem 0;
+    font-size: 0.75rem;
+}
+.social-item {
+    font-size: 0.9rem;
+    padding: 0 0.25rem;
+    border-radius: 0.25rem;
+}
+.social-item:hover {
+    background: #eee;
+}
+.social-link:hover,
+.tag-item:hover,
+.category-item:hover {
+    text-decoration: none;
+}
+.hot-list li,
+.link-list li {
+    font-size: 0.9rem;
+}
+.link-list li {
+    background: none;
+}
+.link-avatar {
+    width: 1rem;
+    height: 1rem;
+}
+.header-icon {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+.header-badge {
+    font-size: 1rem;
+    vertical-align: middle;
+}
+.article-info {
+    font-size: 0.75rem;
+    color: #999;
+}
+.article-tag {
+    font-family: "Comic Sans MS", Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.article-tag:hover {
+    text-decoration: none;
+}
+
+/* footer */
+.footer {
+    color: #555;
+    font-family: STLiti;
+    line-height: 1.5;
+    font-size: 15px;
+}
+.copyright-icon {
+    font-family: normal;
+}
+.busuanzi-count {
+    color: DarkSlateGray;
+}
+.divider {
+    margin: 0 2px;
+}
+.github-star{
+    margin-bottom:-5px;
+    width: 100px;
+    height: 20px;
+}
+.back-to-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 2rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    z-index: 999;
+}
+
+/**
+ * 沐目体 https://github.com/Lruihao/MMT
+ * 大学期间的手写字体 https://lruihao.cn/posts/font-mmt.html
+ */
+@font-face {
+    font-family: MMT;
+    src: url("/fonts/MMT@Lruihao.ttf");
+}
+
+
+/* 移动端样式 */
+@media (max-width: 767px){
+    body {
+        background: #e5e9ed;
+    }
+    .main {
+        background: #fff;
+    }
+    .article-btn .btn {
+        background: #fff;
+        border: 2px solid #555;
+    }
+    .article-btn .btn:hover {
+        color: #fff;
+        background: #000;
+    }
+    .footer {
+        font-size: 12px;
+    }
+    .back-to-top {
+        font-size: 1rem;
+        right: 1rem;
+    }
+}
